@@ -1,0 +1,108 @@
+/* OOCSS
+ストラクチャーとスキンの分離
+コンテナとコンテンツの分離
+
+ストラクチャー：構造
+width/heigth/padding/margin
+スキン：あしらい
+color/font/background/box-shadow/text-shadow */
+
+.btn{
+    display: inline-block;
+    width: 300px;
+    max-width: 100%;
+    padding: 20px 10px;
+    box-shadow: 0 3px 6px rgba(0, 0,0, .16);
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.general {
+    background-color: #e25c00;
+    color:#fff;
+}
+
+.warning {
+    background-color: #f1de00;
+    color: #222;
+}
+
+
+/* SMACSS
+CSSのコードの役割に応じてカテゴリ分けしたもの。
+1.ベース 2. レイアウト 3.モジュール 4.状態（ステート) 5.テーマ
+
+OOCSSで語られていた範囲は「モジュール」におおよそ該当する。
+
+bodyの背景色を設定するのを強く推奨している。
+ユーザー側でWEBブラウザに背景色を独自設定している場合意図によってはWEBサイトが正常に閲覧できなくなる可能性があるため。
+
+基本的にはレイアウト構成の部分でIDの使用が認められている。
+
+特定のページではページの横幅を小さくしたいという方であれば、￥lーという接頭辞がつく */
+
+/* （例）
+.l-narrow #header {
+    width:960px;
+}
+
+.l-narrow #main {
+    width:960px;
+}
+
+.l-narrow #footer {
+    width:960px;
+}
+
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.l-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/*  */
+
+/* 要素をセマンティックにする
+p→h２、h３意味のあるものにする。
+div要素とspan要素にはクラスをつける
+
+要素系セレクタを使う時は
+子孫セレクタではなく、子セレクタを使う。 */ */
+
+.btn {
+    display: inline-block;
+    width: 300px;
+    padding: 20px 10px;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.25s;
+    border-width: 0;
+    box-shadow: 0 3px 6px rgba(0, 0,0, .16);
+    color: #fff;
+    background-color: #DD742C;
+    text-decoration: none;
+
+}
+
+.l-header {
+    max-width: 1230px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 1px solid#ddd;
+    text-align: right;
+}
+
+.l-header .btn-amall {
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.btn-long {
+    width: 160px;
+}
